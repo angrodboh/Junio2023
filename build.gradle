@@ -90,11 +90,9 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/angrodboh/Junio2023")         
             credentials {
-            //las propiedades gpr.user y gpr.key est�n configuradas en gradle.properties en el raiz del proyecto, y se a�ade a .gitignore para que no se suban
-            //O bien configuro las variables de entorno GITHUB_LOGIN y GITHUB_PACKAGES
                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_LOGIN")
                 password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_PACKAGES")
-                }
+            }
         }
     }
     publications {
@@ -102,8 +100,8 @@ publishing {
          //Del tutorial https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven
         
             groupId = 'muit.fs.junio22'
-            artifactId = 'Junio2023'
-            version = '0.1'
+            artifactId = 'junio2023'
+            version = '0.0'
 
             from components.java
         }
