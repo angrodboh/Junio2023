@@ -1,10 +1,10 @@
 /**
- * Clase a probar en el código ejemplo para el control de junio de 2022
+ * Clase a probar en el cï¿½digo ejemplo para el control de junio de 2022
  */
 package muit.fs.junio22;
 
 /**
- * @author Isabel Román
+ * @author Isabel Romï¿½n
  *
  */
 
@@ -23,7 +23,7 @@ public class FirstDayAtSchool {
 	public void prepareMyBag() {
 		schoolbag.put("Pens", 1);
 		schoolbag.put("Notebooks", 1);
-                schoolbag.put("Sharpener", 1);
+        schoolbag.put("Sharpener", 1);
 	}
 
 	public void addThings(String thingName, int number) {
