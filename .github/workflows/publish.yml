@@ -1,5 +1,5 @@
 
-name: Flujo de trabajo para crear el jar y ejecutar tests
+name: Flujo de trabajo para crear el jar, ejecutar tests y publicar el artefacto
 on:
   workflow_dispatch:
   push:
@@ -52,7 +52,6 @@ jobs:
     env:
       GITHUB_LOGIN: ${{ github.actor }}
       GITHUB_PACKAGES: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Clonando el repositorio y estableciendo el espacio de trabajo
         uses: actions/checkout@v3
@@ -61,7 +60,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '16'
-      - name: Probando el código
+      - name: Publicando el artefacto
         run: |
           chmod +x gradlew
           ./gradlew publish
